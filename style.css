@@ -1,0 +1,786 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  background-color: rgb(255, 255, 255);
+}
+.navbar {
+  position: fixed;
+}
+.main-pg-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10vw;
+  background: white;
+  border-bottom: 0.1px solid rgb(107, 107, 107);
+}
+
+.navbarright ul {
+  display: flex;
+  gap: 80px;
+}
+.navbarright ul li {
+  list-style: none;
+}
+.main-pg-logo {
+  text-transform: uppercase;
+  font-size: 35px;
+  text-decoration: none;
+  font-family: "Staatliches", sans-serif;
+  color: rgb(117, 230, 164);
+  display: flex;
+  padding-right: 35vw;
+  padding-left: 7vw;
+}
+.link {
+  font-family: "PT Sans Caption", sans-serif;
+  text-decoration: none;
+  color: rgb(107, 107, 107);
+  text-transform: capitalize;
+  font-size: 19px;
+}
+
+.btn1 {
+  font-size: 19px;
+  text-transform: capitalize;
+  color: rgb(117, 230, 164);
+  font-family: "PT Sans Caption", sans-serif;
+  text-decoration: none;
+}
+.container {
+  padding-bottom: 18vh;
+  display: flex;
+}
+
+.head1 {
+  margin-top: 30vh;
+  margin-left: 9vw;
+  font-family: "Rubik Doodle Shadow", system-ui;
+  text-transform: capitalize;
+  font-size: 90px;
+  color: rgb(117, 230, 164);
+  text-align: left;
+}
+.head2 {
+  margin-top: 6px;
+  margin-left: 7vw;
+  font-family: "Rubik Doodle Shadow", system-ui;
+  text-transform: capitalize;
+  font-size: 90px;
+  color: rgb(107, 107, 107);
+  text-align: left;
+}
+.head3 {
+  margin-top: 3px;
+  font-family: "PT Sans Caption", sans-serif;
+  text-transform: capitalize;
+  font-size: 70px;
+  background-color: rgb(107, 107, 107);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+.main-pg-basket-img {
+  margin-top: 10vh;
+  width: 550px;
+  margin-left: 10vw;
+}
+
+button {
+  margin-top: 5vh;
+  margin-left: 22vw;
+  border: none;
+  background-color: white;
+}
+.btn {
+  padding: 12px 17px 12px 17px;
+  border-radius: 17px;
+  font-size: 17px;
+  color: white;
+  font-weight: 600;
+  text-transform: capitalize;
+  background-color: rgb(117, 230, 164);
+  border-radius: 15px;
+  border: none;
+  font-family: "PT Sans Caption", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.btn:hover {
+  color: rgb(107, 107, 107);
+  background-color: white;
+  border: 1px solid rgb(107, 107, 107);
+}
+
+.main-pg-footer {
+  background-color: rgb(72, 71, 71);
+  padding-top: 10vh;
+}
+
+.boxes {
+  gap: 80px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(107, 107, 107);
+  padding-top: 55px;
+  padding-bottom: 200px;
+}
+
+.box {
+  text-transform: uppercase;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  width: 292px;
+  height: 190px;
+  color: white;
+  background-color: rgb(117, 230, 164);
+  border: 10px solid rgb(255, 255, 255);
+  border-radius: 30px;
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 40px;
+}
+.color-change1:hover {
+  color: rgb(117, 230, 164);
+}
+
+.color-change2:hover {
+  color: rgb(107, 107, 107);
+}
+
+.box-img:hover {
+  transition: transform 0.4s;
+  transform: scale(1.1);
+}
+
+.madebydetail {
+  color: white;
+  font-family: "PT Sans Caption", sans-serif;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 13vh;
+  padding-bottom: 30px;
+}
+.details {
+  color: white;
+  font-family: "PT Sans Caption", sans-serif;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 22px;
+  padding-bottom: 30px;
+  text-decoration: none;
+  padding-left: 6vw;
+  font-weight: 400;
+}
+.details2 {
+  color: white;
+  font-family: "PT Sans Caption", sans-serif;
+  text-align: center;
+  font-size: 22px;
+  padding-bottom: 30px;
+  text-decoration: none;
+  padding-left: 6vw;
+  font-weight: 400;
+}
+
+.box .png1 {
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+.box .png2 {
+  height: 100px;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+.box .png3 {
+  height: 160px;
+  width: 160px;
+  display: block;
+  margin: 0 auto;
+}
+
+.social {
+  text-align: right;
+  margin-right: 15.2vw;
+}
+.social .socialhead {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-family: "PT Sans Caption", sans-serif;
+  color: white;
+  text-decoration: underline;
+}
+.socialicons {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  margin-right: 8.5vw;
+}
+
+.socialicons .icon {
+  width: 34px;
+  height: 34px;
+  padding: 0px;
+  margin-left: 23px;
+  margin-top: 15px;
+}
+
+/* about page css */
+
+.head-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 15vh;
+}
+.head-center .texthead {
+  font-size: 70px;
+  padding-bottom: 1px;
+  text-decoration: none;
+  font-family: "Rubik Doodle Shadow", system-ui;
+  text-transform: capitalize;
+  color: rgb(117, 230, 164);
+}
+
+.para-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 4vh;
+}
+
+.para {
+  font-family: "PT Sans Caption", sans-serif;
+  width: 980px;
+  font-size: 30px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  text-align: center;
+  color: rgb(107, 107, 107);
+}
+
+/* signin & signup page html */
+.body-bg-color {
+  background-color: rgb(208, 208, 208);
+}
+.main-body {
+  margin-top: 3vh;
+}
+.transition-btn {
+  /* text-align: left; */
+  margin-left: 5vw;
+  text-transform: capitalize;
+
+  font-family: "PT Sans Caption", sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(107, 107, 107);
+}
+.form-pos {
+  margin-top: 0vh;
+  margin-left: 35vw;
+  margin-right: 35vw;
+  margin-bottom: 20vh;
+  padding-left: 230px;
+  padding-right: 230px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-radius: 25px;
+  background-color: white;
+  background-image: linear-gradient(
+    180deg,
+    rgb(255, 255, 255) 50%,
+    rgb(117, 230, 164) 100%
+  );
+  border: 1px solid rgb(107, 107, 107);
+}
+
+.tag-linetext {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.tag-linetext .text-head-tag {
+  font-size: 40px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  font-family: "PT Sans Caption", sans-serif;
+  text-transform: capitalize;
+  color: rgb(107, 107, 107);
+}
+
+.form-design {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+::placeholder {
+  font-family: "PT Sans Caption", sans-serif;
+  padding-left: 10px;
+  text-transform: capitalize;
+  color: rgb(174, 175, 177);
+}
+
+.ip-style {
+  margin-bottom: 25px;
+}
+.textbox {
+  height: 50px;
+  width: 350px;
+  box-sizing: border-box;
+  font-size: 15px;
+  background-color: rgb(243, 240, 240);
+  border: none;
+  border-radius: 10px;
+  cursor: auto;
+}
+
+#address-box {
+  resize: none;
+  box-sizing: border-box;
+  font-size: 15px;
+  background-color: rgb(243, 240, 240);
+  border: none;
+  border-radius: 10px;
+  cursor: auto;
+  padding-top: 10px;
+  width: 350px;
+  height: 90px;
+}
+.form-btn-pos {
+  display: flex;
+  justify-content: center;
+}
+.form-btn-style {
+  text-align: center;
+  padding: 10px 30px 10px 30px;
+  text-decoration: none;
+  border-radius: 17px;
+  font-size: 17px;
+  /* color: white; */
+  font-weight: 600;
+  text-transform: capitalize;
+  /* background-color: rgb(117, 230, 164); */
+  color: rgb(117, 230, 164);
+  background-color: rgb(107, 107, 107);
+  border-radius: 15px;
+  border: 1px solid white;
+  /* border: 1px solid rgb(117, 230, 164); */
+
+  font-family: "PT Sans Caption", sans-serif;
+  cursor: pointer;
+}
+
+.pglink {
+  padding-top: 15px;
+  text-align: center;
+  text-transform: capitalize;
+  color: rgb(107, 107, 107);
+
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* signinform */
+.form-pos-1 {
+  margin-top: 8vh;
+  margin-left: 35vw;
+  margin-right: 40vw;
+  margin-bottom: 20vh;
+  padding-left: 230px;
+  padding-right: 230px;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  border-radius: 25px;
+  background-color: white;
+  background-image: linear-gradient(
+    180deg,
+    rgb(255, 255, 255) 50%,
+    rgb(117, 230, 164) 100%
+  );
+  border: 1px solid rgb(107, 107, 107);
+}
+
+.form-btn-style1 {
+  text-align: center;
+  padding: 10px 30px 10px 30px;
+  text-decoration: none;
+  border-radius: 17px;
+  font-size: 17px;
+  /* color: white; */
+  color: rgb(117, 230, 164);
+  background-color: rgb(107, 107, 107);
+  font-weight: 600;
+  text-transform: capitalize;
+  /* background-color: rgb(117, 230, 164); */
+  border-radius: 15px;
+  /* border: 2px solid white; */
+  /* border: 1px solid rgb(117, 230, 164); */
+  border: 1px solid white;
+
+  font-family: "PT Sans Caption", sans-serif;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* shopping page css */
+.shoping-bg {
+  background-color: rgb(208, 208, 208);
+}
+
+.nav-bar-style {
+  background: white;
+  position: sticky;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 65vw;
+}
+
+.shoping-pg-logo {
+  text-transform: uppercase;
+  font-size: 35px;
+  text-decoration: none;
+  font-family: "Staatliches", sans-serif;
+  color: rgb(117, 230, 164);
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+
+  padding-left: 3vw;
+}
+
+.cart-logo-pos {
+  display: inline-block;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  /* justify-content: space-around; */
+}
+.cart-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-gap {
+  padding-left: 40px;
+}
+
+.box-container {
+  display: grid;
+
+  grid-template-columns: repeat(3, 460px);
+
+  grid-template-rows: repeat(8, 600px);
+  align-content: center;
+  justify-content: center;
+  margin: 2vh 13vw 6vh 13vw;
+  padding-bottom: 30px;
+  border-radius: 30px;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+
+.grid-container .box-container .box-layout {
+  background-color: rgb(252, 252, 252);
+
+  border: 5px solid rgb(197, 196, 196);
+  color: aliceblue;
+  text-align: center;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  transition: transform 0.3s;
+}
+
+.box-transition:hover {
+  transform: scale(1.1);
+}
+
+.grid-container .box-container .box-layout .item-img {
+  width: 250px;
+  height: 250px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.grid-container .box-container .box-layout .textmodify {
+  color: rgb(101, 101, 101);
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.grid-container .box-container .box-layout .pricemodify {
+  /* color: rgb(101, 101, 101); */
+  color: black;
+
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.box-container .box-layout .top {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.box-container .box-layout .cart-btn {
+  color: rgb(117, 230, 164);
+  background-color: rgb(107, 107, 107);
+  padding: 13px 110px 13px 110px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 17px;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  font-size: 18px;
+  border: 1px solid rgb(117, 230, 164);
+
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.box-container .box-layout .cart-btn:hover {
+  color: rgb(107, 107, 107);
+  background-color: white;
+  border: 1px solid rgb(107, 107, 107);
+}
+
+.box-container .box-layout .purchase-btn {
+  color: rgb(107, 107, 107);
+
+  background-color: rgb(117, 230, 164);
+  padding: 13px 120px 13px 120px;
+
+  text-align: center;
+  text-decoration: none;
+  border-radius: 17px;
+  text-transform: capitalize;
+  border: 1px solid rgb(107, 107, 107);
+
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.box-container .box-layout .purchase-btn:hover {
+  color: rgb(117, 230, 164);
+  background-color: white;
+  border: 1px solid rgb(117, 230, 164);
+}
+
+.gridbox1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+.gridbox2 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+.gridbox3 {
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+
+.gridbox4 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+.gridbox5 {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.gridbox6 {
+  grid-row: 2/3;
+  grid-column: 3/3;
+}
+.gridbox7 {
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+.gridbox8 {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+.gridbox9 {
+  grid-row: 3/4;
+  grid-column: 3/3;
+}
+.gridbox10 {
+  grid-row: 4/5;
+  grid-column: 1/2;
+}
+.gridbox11 {
+  grid-row: 4/5;
+  grid-column: 2/3;
+}
+.gridbox12 {
+  grid-row: 4/5;
+  grid-column: 3/4;
+}
+
+.gridbox13 {
+  grid-row: 5/6;
+  grid-column: 1/2;
+}
+.gridbox14 {
+  grid-row: 5/6;
+  grid-column: 2/3;
+}
+.gridbox15 {
+  grid-row: 5/6;
+  grid-column: 3/4;
+}
+
+.gridbox16 {
+  grid-row: 6/7;
+  grid-column: 1/2;
+}
+.gridbox17 {
+  grid-row: 6/7;
+  grid-column: 2/3;
+}
+.gridbox18 {
+  grid-row: 6/7;
+  grid-column: 3/4;
+}
+
+.gridbox19 {
+  grid-row: 6/7;
+  grid-column: 1/2;
+}
+.gridbox20 {
+  grid-row: 6/7;
+  grid-column: 2/3;
+}
+.gridbox21 {
+  grid-row: 6/7;
+  grid-column: 3/4;
+}
+
+.gridbox22 {
+  grid-row: 7/8;
+  grid-column: 1/2;
+}
+.gridbox23 {
+  grid-row: 7/8;
+  grid-column: 2/3;
+}
+.gridbox24 {
+  grid-row: 7/8;
+  grid-column: 3/4;
+}
+
+.gridbox25 {
+  grid-row: 8/9;
+  grid-column: 1/2;
+}
+.gridbox26 {
+  grid-row: 8/9;
+  grid-column: 2/3;
+}
+.gridbox27 {
+  grid-row: 8/9;
+  grid-column: 3/4;
+}
+
+/* user page css */
+
+.form-label {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 26px;
+  text-transform: capitalize;
+  /* padding-right: 60px; */
+}
+
+.form-text-adjust {
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* gap: 60px; */
+}
+
+.form-border {
+  border: 1px solid rgb(107, 107, 107);
+  margin-top: 2vh;
+  margin-right: 27vw;
+  margin-left: 27vw;
+  padding-top: 40px;
+
+  border-radius: 25px;
+ padding-bottom:40px;
+ margin-bottom:10vh;
+  background-image: linear-gradient(
+    180deg,
+    rgb(255, 255, 255) 50%,
+    rgb(117, 230, 164) 100%
+  );
+  color: rgb(107, 107, 107);
+}
+
+.form-box-design {
+  margin: auto;
+  background-color: rgb(243, 240, 240);
+
+  display: block;
+  width: 360px;
+  height: 50px;
+  border-radius: 20px;
+  /* border:1px solid rgb(107, 107, 107); */
+  border: none;
+}
+
+#useraddress {
+  resize: none;
+  border: none;
+
+  /* border:1px solid rgb(107, 107, 107); */
+  margin-left: 60px;
+  box-sizing: border-box;
+  /* font-size: 15px; */
+  /* background-color: rgb(243, 240, 240); */
+  /* border: none; */
+  border-radius: 20px;
+  cursor: auto;
+  /* padding-top: 10px; */
+  width: 360px;
+  height: 120px;
+  background-color: rgb(243, 240, 240);
+}
+
+.box-padding {
+  margin-left: 80px;
+}
+
+.box-padding-adjust {
+  margin-left: 50px;
+}
+
+.user-form-design {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-gap{
+  gap:30px ;
+}
