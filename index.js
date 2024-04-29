@@ -1,7 +1,16 @@
 
 
 
+function check_pass(){
+    if(pass.length<5){
+        alert("password should be min length 5")
+    }
+    else if(pass=="")
+    {
+        alert("pls enter the password")
 
+    }
+}
 
 function create_card(pro_img, pro_name, pro_price) {
     let create_box = document.createElement("div");
