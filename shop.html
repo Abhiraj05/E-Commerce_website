@@ -26,6 +26,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
 <body class="shoping-bg">
@@ -33,9 +35,11 @@
     <div class="shopping-pg-navbar">
       <nav class="nav-bar-style">
         <div><a class="shoping-pg-logo color-change2 " href="index.html">gocart</a></div>
-        <div><a class="cart-logo-pos box-transition" href="cart.html"><img class="cart-logo"
-              src="shop images/pngwing.com.png" alt=""></a>
-              <a class="cart-logo-pos box-transition logo-gap" href="user.html"><img class="cart-logo"
+        <div>
+          <a class="cart-logo-pos box-transition" href="#" id="openModal">
+            <img class="cart-logo" src="shop images/pngwing.com.png" alt="">
+            
+            <a class="cart-logo-pos box-transition logo-gap" href="user.html"><img class="cart-logo"
                 src="shop images/pngaaa.com-2127701.png" alt=""></a>
         </div>
 
@@ -44,11 +48,33 @@
     </div>
   </header>
   <main>
+    <div class="modal fade" id="cartdis" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Modal body content goes here -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" style="background-color: rgb(107, 107, 107);text-transform: capitalize; border: none;"  data-dismiss="modal">Close</button>
+
+            <button type="button" style="background-color: rgb(117, 230, 164); text-transform: capitalize; border: none;" class="btn btn-primary btn-primary-mo">buy now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- <a class="transition-btn" href="index.html">back</a> -->
     <div class="grid-container">
       <div class="box-container">
 
-        <div class="gridbox1 box-layout box-transition" >
+        <div class="gridbox1 box-layout box-transition">
           <img class="item-img" src="shop images/organic-rice-amp-moong-khichdi-mix-200g-507933_l-removebg-preview.png"
             alt="">
           <p class=" textmodify">Organic Rice & Moong Porridge Mix 200g</p>
@@ -58,7 +84,7 @@
             <a class="purchase-btn" href="">buy now</a>
           </div>
           <div>
-            <a class="cart-btn" href="" >add to cart</a>
+            <a class="cart-btn" href="">add to cart</a>
           </div>
         </div>
 
@@ -365,7 +391,7 @@
         </div>
 
 
-        
+
         <div class="gridbox22 box-layout  box-transition">
           <img class="item-img" src="shop images/palm-sugar-200g-544358_l-removebg-preview.png" alt="">
           <p class=" textmodify">
@@ -381,7 +407,7 @@
         </div>
 
 
-        
+
         <div class="gridbox23 box-layout  box-transition">
           <img class="item-img" src="shop images/amla-powder-100g-188621_l-removebg-preview.png" alt="">
           <p class=" textmodify">
@@ -397,7 +423,7 @@
         </div>
 
 
-        
+
         <div class="gridbox24 box-layout  box-transition">
           <img class="item-img" src="shop images/organic-bay-leaf-25g-807391_l-removebg-preview.png" alt="">
           <p class=" textmodify">
@@ -429,7 +455,8 @@
 
 
         <div class="gridbox26 box-layout  box-transition">
-          <img class="item-img" src="shop images/split-chickpea-chana-dal-1kg-front-171870_l-removebg-preview.png" alt="">
+          <img class="item-img" src="shop images/split-chickpea-chana-dal-1kg-front-171870_l-removebg-preview.png"
+            alt="">
           <p class=" textmodify">
             Organic Chana Dal 1kg
           </p>
@@ -470,8 +497,13 @@
     </div>
 
 
-
   </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="index.js"></script>
 
 </body>
 

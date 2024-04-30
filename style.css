@@ -156,6 +156,7 @@ body {
 
 .color-change2:hover {
   color: rgb(107, 107, 107);
+  text-decoration: none;
 }
 
 .box-img:hover {
@@ -896,3 +897,7 @@ color: black;
   /* text-align: center; */
   text-transform: capitalize;
   }
+
+
+
+
