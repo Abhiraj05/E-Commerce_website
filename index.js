@@ -1,21 +1,67 @@
 
 
 
-function check_pass(event) {
-    event.preventDefault();
-    let pass = document.getElementById("pass").value;
-    let add_p = document.querySelector("pglink");
+document.addEventListener("DOMContentLoaded", function () {
+    var form = document.getElementById("signupForm");
 
-    if (pass.length >= 6) {
-        alert("Login Successfully");
-    }
-    else {
-        add_p.insertAdjacentHTML("beforeend", "<p>Password length Should be Min 6</p>");
-        add_p.classList.add("pglink");
-    }
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); 
 
-}
+        var fullName = document.getElementById("full-name").value;
+        var phoneNo = document.getElementById("phone-no").value;
+        var address = document.getElementById("address").value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm-password").value;
 
+       
+        if (fullName === "" || phoneNo === "" || address === "" || password === "" || confirmPassword === "") {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match.");
+            return;
+        }
+
+      
+    });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var form = document.querySelector("form");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form submission
+
+        var username = document.getElementById("username").value;
+        var phoneNo = document.getElementById("pno").value;
+        var password = document.getElementById("pass").value;
+
+        // You can add additional client-side validation here if needed
+
+        // Send data to server for verification
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "signin.php", true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    if (xhr.responseText === "success") {
+                        window.location.href = "shop.html";
+                    } else {
+                        alert("Invalid username or password.");
+                    }
+                } else {
+                    alert("An error occurred while processing your request.");
+                }
+            }
+        };
+        xhr.send("username=" + username + "&phone_no=" + phoneNo + "&password=" + password);
+    });
+});
 
 
 //addtocartfunction
