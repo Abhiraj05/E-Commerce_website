@@ -41,16 +41,58 @@
                     <div class="ip-style"><input class="textbox" type="tel" placeholder="phone no" id="pno"  required></div>
                     <div class="ip-style"><input class="textbox" type="password" placeholder="password" id="pass" required></div>
                     <div class="form-btn-pos">
-                        <button class="form-btn-style1" id="log"  href="shop.html">login</button> 
+                        <!-- <button class="form-btn-style1" type="submit" id="log"  href="shop.html">login</button>  -->
+                        <input class="form-btn-style1" type="submit" value="login">
                     </div>
                     <div>
                     <div class="pglink">don't have an account?<a class="pglink" href="signup.html"> signup</a></div>
                     </div>
+                    <div>
+                        <div id="feedback-message"></div>
+                    </div>
                 </form>
             </div>
-            <div></div>
+            <div>
+
+            </div>
         </div>
     </main>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    var form = document.querySelector("form");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form submission
+
+        var username = document.getElementById("username").value;
+        var phoneNo = document.getElementById("pno").value;
+        var password = document.getElementById("pass").value;
+
+        // Send data to server for verification
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "signin.php", true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    if (xhr.responseText === "success") {
+                        // Redirect to shop.html
+                        window.location.href = "shop.html";
+                    } else {
+                        // Display error message
+                        alert(xhr.responseText);
+                    }
+                } else {
+                    // Display error message for server error
+                    alert("An error occurred while processing your request.");
+                }
+            }
+        };
+        xhr.send("username=" + username + "&phone_no=" + phoneNo + "&password=" + password);
+    });
+});
+
+    </script>
 </body>
 </html>
 
