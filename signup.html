@@ -37,12 +37,12 @@
                 <h4 class="text-head-tag">signup</h4>
             </div>
             <div class="form-design">
-                <form  id="signupForm" action="" method="POST">
+                <form  id="signupForm" action="signup.php" method="POST">
 
                     <div class="ip-style"><input class="textbox"  id="full-name" type="text" placeholder="full name" required></div>
-                    <div class="ip-style"><input class="textbox" id="phone-no" type="tel" placeholder="phone no" required></div>
+                    <div class="ip-style"><input class="textbox" id="phone_no" type="tel" placeholder="phone no" required></div>
 
-                    <div class="ip-style"><textarea name="address" id="address-box" placeholder="address"
+                    <div class="ip-style"><textarea name="address" id="address_box" placeholder="address"
                             required></textarea>
                     </div>
 
@@ -67,7 +67,7 @@
         event.preventDefault(); 
 
         let fullName = document.getElementById("full-name").value;
-        let phoneNo = document.getElementById("phone-no").value;
+        let phoneNo = document.getElementById("phone_no").value;
         let address = document.getElementById("address-box").value;
         let password = document.getElementById("password").value;
         let confirmPassword = document.getElementById("confirm-password").value;

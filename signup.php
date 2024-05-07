@@ -1,9 +1,5 @@
-
-
-
 <?php
-// PHP code for processing form data and inserting into the database
-// This code should go in your signup.php file
+// Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
     $fullName = $_POST["full_name"];
@@ -11,30 +7,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = $_POST["address"];
     $password = $_POST["password"];
 
-    // Establish database connection and insert data
-    $servername = "localhost";
-    $username = "your_username";
-    $password = "your_password";
-    $dbname = "your_database_name";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // SQL to insert data into the table
-    $sql = "INSERT INTO your_table_name (full_name, phone_no, address, password) VALUES ('$fullName', '$phoneNo', '$address', '$password')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+    // Validate form data (you can add more validation as needed)
+    if (empty($fullName) || empty($phoneNo) || empty($address) || empty($password)) {
+        echo "Please fill in all fields.";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+        // Connect to your MySQL database (replace with your actual database credentials)
+        $servername = "localhost";
+        $username = "root"; // Replace with your MySQL username
+        $password = ""; // Replace with your MySQL password
+        $dbname = ""; // Replace with your MySQL database name
 
-    // Close database connection
-    $conn->close();
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Prepare SQL query using prepared statements to prevent SQL injection
+        $sql = "INSERT INTO users (full_name, phone_no, address, password) VALUES (?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssss", $fullName, $phoneNo, $address, $password);
+
+        // Execute SQL query
+        if ($stmt->execute()) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+        // Close statement and database connection
+        $stmt->close();
+        $conn->close();
+    }
 }
 ?>
