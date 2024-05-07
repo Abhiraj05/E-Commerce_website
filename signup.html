@@ -37,35 +37,32 @@
                 <h4 class="text-head-tag">signup</h4>
             </div>
             <div class="form-design">
-                <form  id="signupForm" action="signup.php" method="POST">
+                <form  id="signupForm" action="process_form.php" method="post">
 
-                    <div class="ip-style"><input class="textbox"  id="full-name" type="text" placeholder="full name" required></div>
-                    <div class="ip-style"><input class="textbox" id="phone_no" type="tel" placeholder="phone no" required></div>
+                    <div class="ip-style"><input class="textbox"  id="full-name" name="full_name" type="text" placeholder="full name" required></div>
+                    <div class="ip-style"><input class="textbox" id="phone_no" name="phone_no" type="tel" placeholder="phone no" required></div>
 
-                    <div class="ip-style"><textarea name="address" id="address_box" placeholder="address"
+                    <div class="ip-style"><textarea name="address" id="address-box"  placeholder="address"
                             required></textarea>
                     </div>
 
-                    <div class="ip-style"><input class="textbox" id="password" type="password" placeholder="password" required></div>
+                    <div class="ip-style"><input class="textbox" id="password" type="password" name="password" placeholder="password" required></div>
                     <div class="ip-style"><input class="textbox" id="confirm-password" type="password" placeholder="confirm password"
                             required></div>
                     <div class="form-btn-pos">
                         <input class="form-btn-style" type="submit" value="submit">
                     </div>
                     <div class="pglink">already have an account?<a class="pglink" href="signin.html"> login</a></div>
+                    <input type="hidden" id="redirectUrl" name="redirect_url" value="shop.html">
                 </form>
             </div>
         </div>
     </main>
  <script>
-    
-
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     let form = document.getElementById("signupForm");
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); 
-
         let fullName = document.getElementById("full-name").value;
         let phoneNo = document.getElementById("phone_no").value;
         let address = document.getElementById("address-box").value;
@@ -74,19 +71,17 @@
 
         if (fullName === "" || phoneNo === "" || address === "" || password === "" || confirmPassword === "") {
             alert("Please fill in all fields.");
+            event.preventDefault(); 
             return;
         }
 
         if (password !== confirmPassword) {
             alert("Passwords do not match.");
-            return;
+            event.preventDefault(); 
         }
-        window.location.href = "shop.html";
-
-        // If all validations pass, you can submit the form
-        // form.submit();
     });
 });
+
 
  </script>
 </body>
