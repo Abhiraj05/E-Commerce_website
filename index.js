@@ -79,3 +79,47 @@ $(document).ready(function () {
 
 
 
+//chekout
+
+document.addEventListener('DOMContentLoaded', function () {
+    const checkoutBtn = document.querySelector('.checkout-btn');
+    checkoutBtn.addEventListener('click', checkout);
+});
+
+function checkout() {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    if (!cart || cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
+    
+   
+    const userId = "your_user_id_here";
+    
+
+    fetch('/checkout', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userId: userId, cart: cart }),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        
+        alert("Checkout successful!");
+      
+        localStorage.removeItem("cart");
+   
+        $('#cartdis').modal('hide');
+    })
+    .catch(error => {
+  
+        console.error('There was a problem with your fetch operation:', error);
+    });
+}
